@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@geist-ui/react": "^2.2.0",
     "gatsby": "^3.12.1",
     "gatsby-plugin-catch-links": "^3.13.0",
     "gatsby-plugin-gatsby-cloud": "^2.11.0",

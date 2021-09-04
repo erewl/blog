@@ -11,20 +11,22 @@ export default function Blogs({ data }) {
   return (
     <div className="blog-posts">
       <Layout />
-      <h1>Blogs MainPage</h1>
-      {posts
-        .filter(post => post.node.frontmatter.title.length > 0)
-        .map(({ node: post }) => {
-          return (
-            <div className="blog-post-preview" key={post.id}>
-              <h1>
-                <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-              </h1>
-              <h2>{post.frontmatter.date}</h2>
-              <p>{post.excerpt}</p>
-            </div>
-          )
-        })}
+      <div className="posts">
+        <h1>Blogs MainPage</h1>
+        {posts
+          .filter(post => post.node.frontmatter.title.length > 0)
+          .map(({ node: post }) => {
+            return (
+              <div className="blog-post-preview" key={post.id}>
+                <h1>
+                  <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+                </h1>
+                <h2>{post.frontmatter.date}</h2>
+                <p>{post.excerpt}</p>
+              </div>
+            )
+          })}
+      </div>
     </div>
   )
 }
