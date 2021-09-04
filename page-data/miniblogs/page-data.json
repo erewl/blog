@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-miniblogs-js",
+    "path": "/miniblogs/",
+    "result": {"data":{"allMarkdownRemark":{"edges":[{"node":{"excerpt":"Fish is a shell If you want to persist this alias, use the --save flag: This will also save your alias-function in the fish configuration directory in (unless specified differently) ~/.config/fish/functions Now you can enjoy your new alias like me…","id":"895184b9-ba71-5afe-8916-f7f5c2e9fe45","frontmatter":{"title":"Aliases, Path variables and environment variables in fish","date":"April 25, 2021","path":"/miniblogs/fish-alias"}}}]}},"pageContext":{}},
+    "staticQueryHashes": ["3649515864"]}
