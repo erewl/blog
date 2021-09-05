@@ -2,7 +2,7 @@
 path: /blogs/helloworld
 title:  "Scio me nescire"
 date:   2020-07-01 14:51:50 +0200
-tags: introduction aboutme
+tags: introduction,about me
 banner: https://cdn.pixabay.com/photo/2012/03/03/23/52/animal-21649_1280.jpg
 ---
 

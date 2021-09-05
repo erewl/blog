@@ -1,6 +1,5 @@
 import { Button, CssBaseline, GeistProvider } from '@geist-ui/react'
 import React, { useState } from 'react';
-import Header from "./header"
 import Layout from "./layout"
 import { StaticImage } from "gatsby-plugin-image"
 

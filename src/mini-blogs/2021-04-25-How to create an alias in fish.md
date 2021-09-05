@@ -2,7 +2,7 @@
 path: /miniblogs/fish-alias
 title:  "Aliases, Path variables and environment variables in fish"
 date:   2021-04-25 14:43:00 +0100
-categories: miniblogs
+tags: fish,alias
 ---
 
 Fish is a shell

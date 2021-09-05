@@ -1,11 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { Helmet } from "react-helmet"
-import Header from "../components/header"
 import Layout from "../components/layout"
-import { Page } from "@geist-ui/react"
+import { Page, Tag } from "@geist-ui/react"
 
-// import '../css/index.css'; // add some style if you want!
+import '../components/layout.css'; // add some style if you want!
 
 export default function Blogs({ data }) {
   const { edges: posts } = data.allMarkdownRemark
@@ -17,12 +15,17 @@ export default function Blogs({ data }) {
           {posts
             .filter(post => post.node.frontmatter.title.length > 0)
             .map(({ node: post }) => {
+              let tags = post.frontmatter.tags.split(",")
               return (
                 <div className="blog-post-preview" key={post.id}>
-                  <h1>
+                  <h2>
                     <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-                  </h1>
-                  <h2>{post.frontmatter.date}</h2>
+                  </h2>
+                  <h3>{post.frontmatter.date}</h3>
+                  {tags.map((tag => {
+                    return <Tag key={ tag }>{tag}</Tag>
+                  }
+                  ))}
                   <p>{post.excerpt}</p>
                 </div>
               )
@@ -44,6 +47,8 @@ export const pageQuery = graphql`
           id
           frontmatter {
             title
+            tags
+            banner
             date(formatString: "MMMM DD, YYYY")
             path
           }

@@ -34,14 +34,14 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <main>{children}</main>
+        {/* <main>{children}</main> */}
       </div>
     </div>
   )
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  // children: PropTypes.node.isRequired,
   switchThemes: PropTypes.func
 }
 

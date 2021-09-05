@@ -29,7 +29,7 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
       <Link className="menu" to="/">Back home</Link>
-      <Link className="menu" to="/me">About Me</Link>
+      {/* <Link className="menu" to="/me">About Me</Link> */}
       <Link className="menu" to="/blogs">Blogs</Link>
       <Link className="menu" to="/miniblogs">Mini-Blogs</Link>
     </div>
