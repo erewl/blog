@@ -8,7 +8,7 @@ import { Page, Tag } from "@geist-ui/react"
 
 export default function Template({ data }) {
   const { markdownRemark: post } = data
-  console.log(post)
+  let tags = post.frontmatter.tags ? post.frontmatter.tags.split(",") : []
   return (
     <div className="blog-post-container">
       <Layout />
@@ -16,7 +16,10 @@ export default function Template({ data }) {
       <Page>
         <div className="blog-post">
           <h1>{post.frontmatter.title}</h1>
-          <Tag>{post.frontmatter.tags}</Tag>
+          {tags.map(tag => {
+            return <Tag key={tag}>{tag}</Tag>
+          }
+          )}
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: post.html }}

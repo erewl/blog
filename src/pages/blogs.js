@@ -15,17 +15,17 @@ export default function Blogs({ data }) {
           {posts
             .filter(post => post.node.frontmatter.title.length > 0)
             .map(({ node: post }) => {
-              let tags = post.frontmatter.tags.split(",")
+              let tags = post.frontmatter.tags ? post.frontmatter.tags.split(",") : []
               return (
                 <div className="blog-post-preview" key={post.id}>
                   <h2>
                     <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
                   </h2>
                   <h3>{post.frontmatter.date}</h3>
-                  {tags.map((tag => {
-                    return <Tag key={ tag }>{tag}</Tag>
+                  {tags.map(tag => {
+                    return <Tag key={tag}>{tag}</Tag>
                   }
-                  ))}
+                  )}
                   <p>{post.excerpt}</p>
                 </div>
               )
