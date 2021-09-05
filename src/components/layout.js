@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div class='menubar'>
+    <div className='menubar'>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`}/>
       <div
         style={{

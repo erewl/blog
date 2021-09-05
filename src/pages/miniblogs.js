@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 
 import '../components/layout.css'; // add some style if you want!
 import '../components/index.css'; // add some style if you want!
+import { Page } from "@geist-ui/react";
 
 export default function MiniBlogs({ data }) {
   const { edges: posts } = data.allMarkdownRemark
@@ -11,20 +12,21 @@ export default function MiniBlogs({ data }) {
     <div className="blog-posts">
       <Layout />
       <div className="posts">
-        <h1>MiniBlogs Page</h1>
-        {posts
-          .filter(post => post.node.frontmatter.title.length > 0)
-          .map(({ node: post }) => {
-            return (
-              <div className="blog-post-preview" key={post.id}>
-                <h1>
-                  <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-                </h1>
-                <h2>{post.frontmatter.date}</h2>
-                <p>{post.excerpt}</p>
-              </div>
-            )
-          })}
+        <Page>
+          {posts
+            .filter(post => post.node.frontmatter.title.length > 0)
+            .map(({ node: post }) => {
+              return (
+                <div className="blog-post-preview" key={post.id}>
+                  <h1>
+                    <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+                  </h1>
+                  <h2>{post.frontmatter.date}</h2>
+                  <p>{post.excerpt}</p>
+                </div>
+              )
+            })}
+        </Page>
       </div>
     </div>
   )

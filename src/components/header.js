@@ -28,10 +28,10 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-      <Link class="menu" to="/">Back home</Link>
-      <Link class="menu" to="/me">About Me</Link>
-      <Link class="menu" to="/blogs">Blogs</Link>
-      <Link class="menu" to="/miniblogs">Mini-Blogs</Link>
+      <Link className="menu" to="/">Back home</Link>
+      <Link className="menu" to="/me">About Me</Link>
+      <Link className="menu" to="/blogs">Blogs</Link>
+      <Link className="menu" to="/miniblogs">Mini-Blogs</Link>
     </div>
   </header>
 )
