@@ -17,9 +17,8 @@ const App = () => {
 
             <Layout/>
             {/* <Button onClick={switchThemes}>Toggle</Button> */}
-            <Display shadow caption="An open-source design system for building modern websites and applications.">
+            <Display>
                 {/* <Image src="../images/cover.jpg" /> */}
-
                 <StaticImage
                     src="../images/cover.jpg"
                     // width={300}
